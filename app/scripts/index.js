@@ -1,6 +1,7 @@
-var $ = require('jquery');
-var _ = require('underscore');
+var $ = window.$ = window.jQuery = require('jquery');
 var Handlebars = require('handlebars');
+var _ = require('underscore');
+require('bootstrap-sass');
 var githubtoken = require('./gitapikey.js');
 var url = "https://api.github.com/users/johnbaldwin3";
 var repoURL = "https://api.github.com/users/johnbaldwin3/repos";
@@ -14,23 +15,46 @@ if(githubtoken !== undefined) {
   });
 }
 
-// function start(ajaxResults){
-//   console.log(ajaxResults);
-//   var repos = $('#')
-//
-// }
+$.ajax(url).done(function(profile){
+  console.log(profile);
+  displayProf(profile);
+});
 
+function displayProf(profile){
+  var source = $('#prof-template').html();
+  var template = Handlebars.compile(source);
+
+
+    $('.bio').append(template(profile));
+
+
+}
+
+  $.ajax(repoURL).done(function(repoList){
+    console.log(repoList);
+    displayRepos(repoList);
+  });
+
+
+function displayRepos(repoList){
+  var source = $('#repo-template').html();
+  var template = Handlebars.compile(source);
+
+  _.each(repoList, function(repo){
+    $('.repo-list').append(template(repo));
+
+  });
+}
 //sort data by chrono order inside function?
 //_.sort?
 
-$.ajax(url).done(function(data){
-  console.log(data);
-});
-
-$.ajax(repoURL).done(function(data){
-  console.log(data);
-  _.each(function(data){
 
 
-  })
-});
+// _.each(repos, function(items){
+//
+//   var context = {
+//     "name" : repos.name
+//   };
+//   console.log(context);
+// $('#repo-template').append(template(context));
+// });
