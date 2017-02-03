@@ -6,7 +6,17 @@ var moment = require('moment');
 var githubtoken = require('./gitapikey.js');
 var url = "https://api.github.com/users/johnbaldwin3";
 var repoURL = "https://api.github.com/users/johnbaldwin3/repos";
+var octicons = require("octicons");
+
+var ctx = {
+  icon: octicons.mail.toSVG()
+};
 //send auth. token to github if token is provided
+
+
+//set new ajax call for org
+//create new html template for it
+//rock n roll 
 
 if(githubtoken !== undefined) {
   $.ajaxSetup({
@@ -18,6 +28,10 @@ if(githubtoken !== undefined) {
 
 $.ajax(url).done(function(profile){
   console.log(profile);
+ $.ajax(profile.organizations_url).done(function(orgList){
+   console.log(orgList);
+
+ });
   displayProf(profile);
   displayOverview(profile);
   displayProfThumb(profile)
@@ -52,14 +66,26 @@ function displayRepos(repoList){
   var source = $('#repo-template').html();
   var template = Handlebars.compile(source);
 
+_.chain(repoList)
+  .sortBy(function(repo){
+    return -(new Date(repo.updated_at)).getTime()
+  })
+  .each(function(repo){
+    repo.updated_at = moment(new Date(repo.updated_at)).fromNow();
 
-  _.each(repoList, function(repo){
     $('.repo-list').append(template(repo));
-    //var time = moment(new Date(repo.update_at).fromNow());
-    //console.log('time', time);
-    //$('.updated').html(timeSinceUpdate);
+    // console.log(new Date(repo.updated_at));
+    // var time =
+    // console.log('time', time);
+    // $('.updated').html(time);
   });
 }
+
+
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 //var time = moment(new Date(repo.update at).fromNow())
 
 //sort data by chrono order inside function?

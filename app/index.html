@@ -33,11 +33,11 @@
           </div>
         </div>
         <div class="col-md-3 right-nav">
-          <div class="plus-ico">
+          <div class="plus-ico" data-toggle="tooltip" data-placement="bottom" title="Create new...">
             <img src="images/octicons-5.0.1/lib/svg/plus.svg" alt="">
             <img src="images/octicons-5.0.1/lib/svg/triangle-down.svg" alt="">
           </div>
-          <div class="prof-thumb">
+          <div class="prof-thumb" data-toggle="tooltip" data-placement="bottom" title="View profile and more">
             <!--insert prof pic thumbnail-->
           </div>
         </div>
@@ -150,7 +150,7 @@
 
               <div class="col-md-4">
                 <div class="new-button">
-                  <a class="btn btn-default" href="#" role="button"><img src="images/octicons-5.0.1/lib/svg/repo.svg" alt="">New</a>
+                  <a class="btn btn-default new-btn" href="#" role="button"><img class="repoicon" src="images/octicons-5.0.1/lib/svg/repo.svg" alt="">New</a>
                 </div>
               </div>
             </div>
@@ -175,7 +175,9 @@
       </div>
       <div class="left-side-of-repo">
         <div class="lang">
-          <span>o css</span>
+          <span>
+            <span class="dot {{language}}"></span>
+            {{language}}</span>
         </div>
         <div class="updated">
           <span>{{updated_at}}</span>
@@ -189,8 +191,8 @@
   </script>
 <!--PROFILE TEMPLATE-->
   <script id="prof-template" type="text/x-handlebars-template">
-    <div class="picture ">
-      <img class="img-rounded" src="{{avatar_url}}" alt="">
+    <div class="picture">
+      <img class="img-rounded prof-pic" src="{{avatar_url}}" alt="" >
     </div>
     <div class="name">
       <h3>{{name}}</h3>
@@ -215,7 +217,7 @@
       <div class="orgs">
         <h4>Organizations</h4>
         <a href="#">
-          <img src="https://www.fillmurray.com/25/25" alt="">
+          <img class="org-pic" src="{{avatar_url}}" alt="">
         </a>
       </div>
     </div>

@@ -12,6 +12,12 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+.prof-pic {
+  max-height: 232px;
+}
+.input-group .form-control {
+  width: 230%;
+}
 img {
   max-width: 100%;
 }
@@ -55,6 +61,7 @@ header {
   }
 }
 .menus {
+    padding-top: 25px;
    ul {
      list-style: none;
    }
@@ -82,8 +89,9 @@ header {
 .type-button {
 
 }
-.new-button {
-
+.new-btn {
+  color: white;
+  background: linear-gradient(#8EDA6C, #59B133);
 }
 // .picture > img {
 //   border-radius: 5px;
@@ -103,4 +111,36 @@ header {
 }
 .repos {
   border-bottom: 1px #e5e5e5 solid;
+}
+
+/*************************
+Lanuage Colors
+**************************/
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+.HTML {
+  background-color: #FF3B16 ;
+}
+
+.CSS {
+  background-color: #5B3D7D;
+}
+
+.JavaScript {
+
+  background-color: #F1E05A ;
+}
+
+.repoicon {
+
+  fill: #fff;
+}
+
+.org-pic {
+  height: 20px;
+  width: 20px;
 }
