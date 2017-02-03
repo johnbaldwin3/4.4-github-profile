@@ -16,13 +16,32 @@
         <div class="col-md-1">
           <a class="logo-anchor" href="#"><img class="logo-img" src="images/octicons-5.0.1/lib/svg/mark-github.svg" alt=""></a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="input-group">
             <span class="input-group-btn">
             </span>
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control git-search" placeholder="Search GitHub">
           </div>
         </div>
+        <div class="col-md-4 nav-lists">
+          <div class="nav-opts">
+            <ul class="nav-opt-ul">
+              <li><a href="#">Pull Requests</a></li>
+              <li><a href="#">Issues</a></li>
+              <li><a href="#">Gist</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 right-nav">
+          <div class="plus-ico">
+            <img src="images/octicons-5.0.1/lib/svg/plus.svg" alt="">
+            <img src="images/octicons-5.0.1/lib/svg/triangle-down.svg" alt="">
+          </div>
+          <div class="prof-thumb">
+            <!--insert prof pic thumbnail-->
+          </div>
+        </div>
+
       </header>
     </div>
   </div>
@@ -63,24 +82,26 @@
       <div class="col-md-9">
         <div class="row">
           <div class="menus">
-            <ul>
+            <div id="menu-list">
+            <!-- <ul>
               <li class="opt-li">
                 <a href="#">Overview</a>
               </li>
               <li class="opt-li">
-                <a href="#">Repositories</a>
+                <a href="#">Repositories<span class="badge">3</span></a>
               </li>
               <li class="opt-li">
-                <a href="#">Stars</a>
+                <a href="#">Stars<span class="badge">3</span></a>
               </li>
               <li class="opt-li">
-                <a href="#">Followers</a>
+                <a href="#">Followers<span class="badge">3</span></a>
               </li>
               <li class="opt-li">
-                <a href="#">Following</a>
+                <a href="#">Following<span class="badge">3</span></a>
               </li>
-            </ul>
+            </ul> -->
           </div>
+        </div>
           <!--menus-->
         </div>
         <div class="row search-bar">
@@ -129,20 +150,25 @@
 
               <div class="col-md-4">
                 <div class="new-button">
-                  <a class="btn btn-default" href="#" role="button">Link</a>
+                  <a class="btn btn-default" href="#" role="button"><img src="images/octicons-5.0.1/lib/svg/repo.svg" alt="">New</a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="repo-list">
+            <div class="row">
             <!--insert repo-template here-->
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+  <!--REPO TEMPLATE-->
   <script id="repo-template" type="text/x-handlebars-template">
+
     <div class="repos">
       <div class="repo-title">
         <h3>{{name}}</h3>
@@ -161,10 +187,10 @@
     </div>
 
   </script>
-
+<!--PROFILE TEMPLATE-->
   <script id="prof-template" type="text/x-handlebars-template">
-    <div class="picture">
-      <img src="{{avatar_url}}" alt="">
+    <div class="picture ">
+      <img class="img-rounded" src="{{avatar_url}}" alt="">
     </div>
     <div class="name">
       <h3>{{name}}</h3>
@@ -177,11 +203,11 @@
     </div>
     <div class="email-comnpany">
     <div class="assoc">
-      <span>{{company}}</span>
+      <span><img src="images/octicons-5.0.1/lib/svg/organization.svg" alt=""> {{company}}</span>
     </div>
     <div class="email">
       <span>
-      <a href="#">{{email}}</a>
+      <a href="#"><img src="images/octicons-5.0.1/lib/svg/mail.svg" alt="">{{email}}</a>
       </span>
     </div>
     </div>
@@ -193,6 +219,34 @@
         </a>
       </div>
     </div>
+  </script>
+  <!--MENU OVERVIEW TEMPLATE-->
+  <script id="overview-template" type="text/x-handlebars-template">
+    <ul>
+      <li class="opt-li">
+        <a href="#">Overview</a>
+      </li>
+      <li class="opt-li">
+        <a href="#">Repositories<span class="badge">{{public_repos}}</span></a>
+      </li>
+      <li class="opt-li">
+        <a href="#">Stars<span class="badge">3</span></a>
+      </li>
+      <li class="opt-li">
+        <a href="#">Followers<span class="badge">{{followers}}</span></a>
+      </li>
+      <li class="opt-li">
+        <a href="#">Following<span class="badge">{{following}}</span></a>
+      </li>
+    </ul>
+  </script>
+  <script id="prof-thumb-template" type="text/x-handlebars-template">
+    <div class="thumb-container">
+      <div class="thumb-pic">
+    <img class"thumb" src="{{avatar_url}}" alt="">
+      </div>
+    <img src="images/octicons-5.0.1/lib/svg/triangle-down.svg" alt="">
+  </div>
   </script>
   <script src="js/bundle.js"></script>
 </body>
