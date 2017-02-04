@@ -9,100 +9,66 @@
 </head>
 
 <body>
+  <div class="container clearfix"></div>
 
-  <div class="container-fluid">
-    <div class="row">
       <header>
-        <div class="col-md-1">
+        <div class="container">
+          <div class="row">
+          <div class="col-md-12">
+
+        <div class="col-md-10 left-side-nav">
           <a class="logo-anchor" href="#"><img class="logo-img" src="images/octicons-5.0.1/lib/svg/mark-github.svg" alt=""></a>
-        </div>
-        <div class="col-lg-4">
-          <div class="input-group">
+
+
+          <div class="input-group search-github">
             <span class="input-group-btn">
             </span>
             <input type="text" class="form-control git-search" placeholder="Search GitHub">
           </div>
-        </div>
-        <div class="col-md-4 nav-lists">
-          <div class="nav-opts">
             <ul class="nav-opt-ul">
               <li><a href="#">Pull Requests</a></li>
               <li><a href="#">Issues</a></li>
               <li><a href="#">Gist</a></li>
             </ul>
           </div>
-        </div>
-        <div class="col-md-3 right-nav">
+        <div class="col-md-2 right-nav">
           <div class="plus-ico" data-toggle="tooltip" data-placement="bottom" title="Create new...">
+            <a href="#" role="button" class="btn btn-default dropdown-toggle plus-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="images/octicons-5.0.1/lib/svg/plus.svg" alt="">
-            <img src="images/octicons-5.0.1/lib/svg/triangle-down.svg" alt="">
+            <!-- <img class="triangle" src="images/octicons-5.0.1/lib/svg/triangle-down.svg" alt=""> -->
+
+          <span class="caret"></span>
+          </a>
+            <ul class="dropdown-menu drop-menu-plus">
+              <li><a href="#">New repository</a></li>
+              <li><a href="#">Import repository</a></li>
+              <li><a href="#">New gist</a></li>
+              <li><a href="#">New organization</a></li>
+            </ul>
+
           </div>
           <div class="prof-thumb" data-toggle="tooltip" data-placement="bottom" title="View profile and more">
             <!--insert prof pic thumbnail-->
+
           </div>
         </div>
-
-      </header>
     </div>
   </div>
+  </div>
+  </header>
   <div class="container">
-    <div class="row">
+    <div class="row topper">
       <div class="col-md-3 bio">
-        <!-- <div class="picture">
-          <img src="https://www.fillmurray.com/230/230" alt="">
-        </div>
-        <div class="name">
-          <span>John Baldwin III</span>
-        </div>
-        <div class="username">
-          <span>johnbaldwin3</span>
-        </div>
-        <div class="bio">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo c.</p>
-        </div>
-        <div class="assoc">
-          <span>@ironyardstuff</span>
-        </div>
-        <div class="email">
-          <span>
-          john@somewhere.com
-          </span>
-        </div>
-        <div class="organizations">
-          <div class="orgs">
-            <h4>Organizations</h4>
-            <a href="#">
-              <img src="https://www.fillmurray.com/25/25" alt="">
-            </a>
-          </div>
-        </div> -->
+        <!--insert bio repo here-->
       </div><!--end of left col-md-3-->
-
-
       <div class="col-md-9">
         <div class="row">
-          <div class="menus">
+          <div class="menus fixed-nav-bar">
             <div id="menu-list">
-            <!-- <ul>
-              <li class="opt-li">
-                <a href="#">Overview</a>
-              </li>
-              <li class="opt-li">
-                <a href="#">Repositories<span class="badge">3</span></a>
-              </li>
-              <li class="opt-li">
-                <a href="#">Stars<span class="badge">3</span></a>
-              </li>
-              <li class="opt-li">
-                <a href="#">Followers<span class="badge">3</span></a>
-              </li>
-              <li class="opt-li">
-                <a href="#">Following<span class="badge">3</span></a>
-              </li>
-            </ul> -->
+    <!--insert menu templates here -->
           </div>
         </div>
-          <!--menus-->
+
         </div>
         <div class="row search-bar">
           <div class="col-md-6">
@@ -121,15 +87,23 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="input-group-btn type-button">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type:<span class="all-span"> All</span>
                 <span class="caret"></span>
               </button>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li class="dropdown-header">Select type:</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">All</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Public</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Private</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Sources</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Forks</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Mirrors</a></li>
                   </ul>
                 </div>
               </div>
@@ -139,18 +113,24 @@
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span>
             </button>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                      <li class="dropdown-header">Select type:</li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">All</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">CSS</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">HTML</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">JavaScript</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Ruby</a></li>
                   </ul>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="new-button">
-                  <a class="btn btn-default new-btn" href="#" role="button"><img class="repoicon" src="images/octicons-5.0.1/lib/svg/repo.svg" alt="">New</a>
+                  <!-- <a class="btn btn-default new-btn" href="#" role="button"><img class="repoicon" src="{{{repo}}}" alt="">New</a> -->
                 </div>
               </div>
             </div>
@@ -205,32 +185,33 @@
     </div>
     <div class="email-comnpany">
     <div class="assoc">
-      <span><img src="images/octicons-5.0.1/lib/svg/organization.svg" alt=""> {{company}}</span>
+      <span class="assoc-span">
+        <div class="org-icon"></div>
+
+        <img src="images/octicons-5.0.1/lib/svg/organization.svg" alt="">
+         {{company}}</span>
     </div>
     <div class="email">
       <span>
-      <a href="#"><img src="images/octicons-5.0.1/lib/svg/mail.svg" alt="">{{email}}</a>
+      <a href="#">
+        <img src="images/octicons-5.0.1/lib/svg/mail.svg" alt="">
+        {{email}}</a>
       </span>
     </div>
     </div>
     <div class="organizations">
       <div class="orgs">
-        <h4>Organizations</h4>
-        <a href="#">
-          <img class="org-pic" src="{{avatar_url}}" alt="">
-        </a>
+
       </div>
     </div>
   </script>
   <!--MENU OVERVIEW TEMPLATE-->
   <script id="overview-template" type="text/x-handlebars-template">
-    <ul>
-      <li class="opt-li">
-        <a href="#">Overview</a>
-      </li>
-      <li class="opt-li">
-        <a href="#">Repositories<span class="badge">{{public_repos}}</span></a>
-      </li>
+        <a class="opt-li" href="#">Overview</a>
+
+
+        <a class="opt-li" href="#">Repositories<span class="badge">{{public_repos}}</span></a>
+  
       <li class="opt-li">
         <a href="#">Stars<span class="badge">3</span></a>
       </li>
@@ -242,14 +223,48 @@
       </li>
     </ul>
   </script>
+  <!--PROFILE THUMBNAIL PICTURE TEMPLATE-->
   <script id="prof-thumb-template" type="text/x-handlebars-template">
     <div class="thumb-container">
       <div class="thumb-pic">
-    <img class"thumb" src="{{avatar_url}}" alt="">
-      </div>
-    <img src="images/octicons-5.0.1/lib/svg/triangle-down.svg" alt="">
-  </div>
+        <a href="#" role="button" class="btn btn-default dropdown-toggle thumb-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class"thumb" src="{{avatar_url}}" alt="">
+          <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu drop-menu-thumb">
+        <li class="dropdown-header">Signed in as<br>
+        <span id="user-name"> </span></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Your profile</a></li>
+        <li><a href="#">Your stars</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Integrations</a></li>
+        <li><a href="#">Help</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+
+
   </script>
+  <!--ORGANIZATIONS GROUPS TEMPLATE-->
+  <script id="profile-menu-template" type="text/x-handlebars-template">
+  <span>{{login}}</span>
+  </script>
+  <!--ORGANIZATIONS GROUPS TEMPLATE-->
+  <script id="org-template" type="text/x-handlebars-template">
+  <h4>Organizations</h4>
+  <a href="#">
+    <img class="org-pic" src="{{avatar_url}}" alt="">
+  </a>
+  </script>
+  <!--OCTICONS TEMPLATE(S)-->
+  <script id="octicons-template" type="text/x-handlebars-template">
+  <a class="btn btn-default new-btn" href="#" role="button">{{{repo}}} New</a>
+</script>
+<script id="octicons-org-template" type="text/x-handlebars-template">
+  {{{organization}}}
+</script>
   <script src="js/bundle.js"></script>
 </body>
 

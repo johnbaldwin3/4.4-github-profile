@@ -15,23 +15,126 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 .prof-pic {
   max-height: 232px;
 }
-.input-group .form-control {
-  width: 230%;
-}
+// .input-group .form-control {
+//   width: 230%;
+// }
 img {
   max-width: 100%;
 }
 
+/*************************************
+Header Styling
+*************************************/
 header {
   width: 100%;
   height: 50px;
   padding: 10px 0;
   border-bottom: 1px solid #e5e5e5;
-  background-color: #f5f5f5;
+  background:linear-gradient(#f5f5f5,#E9E9E9) ;
+}
+
+/*************************************
+Left Side of Header / Main Nav
+*************************************/
+.left-side-nav {
+  // float: left;
+  display: inline-block;
+}
+//******************** logo work
+.logo-anchor {
+  display: inline-block;
+
+}
+
+.logo-img {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+//******************** search bar
+.search-github {
+  display: inline-block;
+  padding-left: 1%;
+  width: 360px;
+
 }
 
 
+.git-search {
+  display: inline-block;
+  height: 28px;
+  // .git-search::-webkit-input-placeholder{
+  //   color: #C8C8C8;
+  // }
+}
+
+/**** thank you stackoverflow ***** ---http://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css
+*/
+.git-search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #C8C8C8;
+}
+//******************** navbar options
+
+.nav-opt-ul {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0px;
+  vertical-align: top;
+
+}
+
+.nav-opt-ul>li {
+  display: inline-block;
+    a {
+      padding: 4px 8px;
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 20px;
+      color: #333333;
+    }
+    a:hover {
+      text-decoration: none;
+      color: #4078c0
+    }
+}
+
+
+/*************************************
+Right Side of Header / Main Nav
+*************************************/
+
+
+.plus-menu {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 auto;
+}
+.thumb-menu {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 auto;
+  padding-left: 8px;
+}
+.thumb-pic {
+
+  display: inline-block;
+  img {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+  }
+}
 .right-nav {
+  text-align: right;
+  padding-top: 5px;
   .plus-ico {
   display: inline-block;
   }
@@ -40,49 +143,81 @@ header {
   }
 }
 
-.git-search {
-  height: 28px;
+.drop-menu-plus::after{
 
+    top: -14px;
+    right: 10px;
+    left: auto;
 }
 
-.thumb-pic {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  img {
-    border-radius: 3px;
-  }
+/*************************************
+Fixed NavBar *Overview*
+*************************************/
+.topper {
+  margin-top: 24px;
 }
 
-.nav-lists {
-  list-style: none;
-  li {
-    display: inline;
-  }
-}
 .menus {
-    padding-top: 25px;
-   ul {
-     list-style: none;
-   }
-   .opt-li {
-     display: inline;
-   }
+  display: table;
+  // padding-top: 25px;
   border-bottom: 1px #e5e5e5 solid;
-  height: 64px;
+  height: 62px;
   padding-bottom: 6px;
+  width: 100%;
+
+    ul {
+      list-style: none;
+    }
 }
 
-.logo-img {
-  height: 40px;
-  padding-bottom: 6px;
+.opt-li {
+    display: table-cell;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #767676;
+    vertical-align: middle;
+    border-bottom: 2px solid transparent;
 }
+
+.opt-li:hover {
+  border-bottom: 2px solid #C9520D;
+}
+
+.opt-li {
+  font-size: 14px;
+  color: #767676;
+   .badge{
+     background-color: #EAEAEA;
+     color: #636363;
+     margin-left: 5px;
+   }
+}
+
+.opt-li>a:hover {
+  color: #333;
+  text-decoration: none;
+
+}
+
 .search-bar {
+
   height: 68px;
   padding-top: 30px;
   border-bottom: 1px #e5e5e5 solid;
   margin-bottom: 20px;
 }
+
+.search-repo-bar {
+  // display: inline-block;
+  // width: 380px;
+}
+//see previous menu bar-- StackOverflow, you are my friend.
+.search-repo-bar::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #C8C8C8;
+}
+
+
 .language-button {
 
 }
@@ -135,7 +270,7 @@ Lanuage Colors
   background-color: #F1E05A ;
 }
 
-.repoicon {
+.new-btn {
 
   fill: #fff;
 }
