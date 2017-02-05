@@ -124,7 +124,7 @@ function displayRepos(repoList){
 //chained underscore methods
 //sorts data in reverse chrono order (-)
 
-    console.log(repoList);
+    //console.log(repoList);
 _.chain(repoList)
   .sortBy(function(repo){
     return -(new Date(repo.updated_at)).getTime()
@@ -146,9 +146,10 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+console.log('sparkline', sparkline);
+console.log($('#sparkline'));
 
-
-$("#sparkline").sparkline([5,6,7,9,9,5,3,2,2,4,6,7], {
+$('.sparkline').html(sparkline([5,6,7,9,9,5,3,2,2,4,6,7], {
     type: 'line',
     lineColor: '#e2eda9',
     fillColor: '#ffffff',
@@ -157,7 +158,7 @@ $("#sparkline").sparkline([5,6,7,9,9,5,3,2,2,4,6,7], {
     minSpotColor: undefined,
     maxSpotColor: undefined,
     highlightSpotColor: undefined,
-    highlightLineColor: undefined});
+    highlightLineColor: undefined}));
 
 // $('.plus-menu').on('click', function() {
 //   $('plus-menu').hide('[data-toggle]="tooltip"');

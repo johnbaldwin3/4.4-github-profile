@@ -14,6 +14,9 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// background-color: #fff;
+// padding-top: 52px;
+// width: 100%;
 }
 
 .prof-pic {
@@ -30,8 +33,9 @@ img {
    Header Styling
 *************************************/
 header {
-  width: 100%;
+
   height: 50px;
+
   padding: 10px 0;
   border-bottom: 1px solid #e5e5e5;
   background:linear-gradient(#f5f5f5,#E9E9E9) ;
@@ -153,6 +157,27 @@ header {
     right: 10px;
     left: auto;
 }
+
+/*************************************
+  Main Body / fixed positioning
+*************************************/
+//
+// .main {
+//   position: relative;
+//   background-color: #fff;
+//
+// }
+//
+// .main-scrollby, header {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//
+// }
+//
+// .menu-list {
+//   position: relative;
+// }
 
 /*************************************
   Fixed NavBar *Overview*
