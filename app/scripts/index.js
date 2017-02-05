@@ -67,10 +67,15 @@ $.ajax(url).done(function(profile){
 
   //AJAX call to get organization list info
   $.ajax(profile.organizations_url).done(function(orgList){
-
     displayOrg(orgList);
-
   });
+
+  //trying to figure out how to get star //count $.ajax(profile.starred_url).done(function(starList){
+  // 
+  //   console.log(starList);
+  //   console.log(profile);
+  // });
+
 
   displayProf(profile);
   displayOverview(profile);
@@ -99,6 +104,7 @@ function displayOrg(orgs){
 function displayOverview(profile){
   var source = $('#overview-template').html();
   var template = Handlebars.compile(source);
+  console.log('overview', profile);
     $('#menu-list').append(template(profile));
 }
 

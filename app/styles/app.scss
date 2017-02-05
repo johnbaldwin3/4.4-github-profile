@@ -162,55 +162,52 @@ Fixed NavBar *Overview*
   // padding-top: 25px;
   border-bottom: 1px #e5e5e5 solid;
   height: 62px;
-  padding-bottom: 6px;
+  // padding-bottom: 6px;
   width: 100%;
-
-    ul {
-      list-style: none;
-    }
 }
 
 .opt-li {
     display: table-cell;
     padding-right: 20px;
     padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 14px;
     color: #767676;
     vertical-align: middle;
     border-bottom: 2px solid transparent;
+    font-size: 14px;
+    color: #767676;
+
+     .badge{
+       background-color: #EAEAEA;
+       color: #636363;
+       margin-left: 5px;
+     }
 }
 
 .opt-li:hover {
   border-bottom: 2px solid #C9520D;
-}
-
-.opt-li {
-  font-size: 14px;
-  color: #767676;
-   .badge{
-     background-color: #EAEAEA;
-     color: #636363;
-     margin-left: 5px;
-   }
-}
-
-.opt-li>a:hover {
   color: #333;
   text-decoration: none;
-
 }
 
-.search-bar {
+/*************************************
+Search Bar and Sort Buttons Row
+*************************************/
 
+.search-bar-row {
   height: 68px;
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px #e5e5e5 solid;
   margin-bottom: 20px;
 }
 
-.search-repo-bar {
-  // display: inline-block;
-  // width: 380px;
+.search-bar{
+  float: left;
+  display: table-cell;
+  width: 380px;
 }
 //see previous menu bar-- StackOverflow, you are my friend.
 .search-repo-bar::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -219,10 +216,12 @@ Fixed NavBar *Overview*
 
 
 .language-button {
+  background: linear-gradient(#FBFBFB, #EFEFEF);
+  border-radius: 5px;
 
 }
 .type-button {
-
+   @extend .language-button;
 }
 .new-btn {
   color: white;

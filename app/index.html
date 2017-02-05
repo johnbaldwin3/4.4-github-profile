@@ -70,24 +70,24 @@
         </div>
 
         </div>
-        <div class="row search-bar">
-          <div class="col-md-6">
-            <div class="row">
+        <div class="row search-bar-row">
+          <div class="col-md-7">
+            <!-- <div class="row"> -->
               <div class="search-options">
                 <div class="input-group">
-                  <span class="input-group-btn">
+                  <span class="input-group-btn search-bar">
                   </span>
                   <input type="text" class="search-repo-bar form-control" placeholder="Search Repositories...">
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 type-all">
                 <div class="input-group-btn type-button">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type:<span class="all-span"> All</span>
+                  <button id="type-button" type="button" class="btn btn-default dropdown-toggle type-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type:<span class="all-span"> All</span>
                 <span class="caret"></span>
               </button>
                   <ul class="dropdown-menu">
@@ -110,7 +110,7 @@
               <!-- /btn-group -->
               <div class="col-md-4">
                 <div class="input-group-btn language-button">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span>
+                  <button type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span>
             </button>
                   <ul class="dropdown-menu">
                       <li class="dropdown-header">Select type:</li>
@@ -208,20 +208,10 @@
   <!--MENU OVERVIEW TEMPLATE-->
   <script id="overview-template" type="text/x-handlebars-template">
         <a class="opt-li" href="#">Overview</a>
-
-
-        <a class="opt-li" href="#">Repositories<span class="badge">{{public_repos}}</span></a>
-  
-      <li class="opt-li">
-        <a href="#">Stars<span class="badge">3</span></a>
-      </li>
-      <li class="opt-li">
-        <a href="#">Followers<span class="badge">{{followers}}</span></a>
-      </li>
-      <li class="opt-li">
-        <a href="#">Following<span class="badge">{{following}}</span></a>
-      </li>
-    </ul>
+         <a class="opt-li" href="#">Repositories<span class="badge">{{public_repos}}</span></a>
+        <a class="opt-li" href="#">Stars<span class="badge">3</span></a>
+        <a class="opt-li" href="#">Followers<span class="badge">{{followers}}</span></a>
+        <a class="opt-li" href="#">Following<span class="badge">{{following}}</span></a>
   </script>
   <!--PROFILE THUMBNAIL PICTURE TEMPLATE-->
   <script id="prof-thumb-template" type="text/x-handlebars-template">
