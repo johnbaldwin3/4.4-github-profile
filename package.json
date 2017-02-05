@@ -67,6 +67,7 @@
   },
   "dependencies": {
     "moment": "^2.17.1",
-    "octicons": "^5.0.1"
+    "octicons": "^5.0.1",
+    "sparkline": "^0.1.2"
   }
 }

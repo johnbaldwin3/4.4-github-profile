@@ -9,6 +9,7 @@ require('bootstrap-sass');
 var moment = require('moment');
 var githubtoken = require('./gitapikey.js');
 var octicons = require("octicons");
+var sparkline = require("sparkline");
 /*************************************
 Setting Variables
 *************************************/
@@ -31,25 +32,6 @@ console.log(ctx);
   $('.new-button').html(templateOcticons(ctx));
 }());
 
-// (function(){
-// var source = $('#octicons-org-template').html();
-// var template = Handlebars.compile(source);
-// var ctx = {
-//   organization: octicons.organization.toSVG()
-// };
-// console.log(ctx);
-//   // $('.repoicon').html(template(ctx));
-//   $('.org-icon').html(template(ctx));
-// }());
-
-
-
-
-
-
-
-
-
 //send auth. token to github if token is provided
 if(githubtoken !== undefined) {
   $.ajaxSetup({
@@ -71,7 +53,7 @@ $.ajax(url).done(function(profile){
   });
 
   //trying to figure out how to get star //count $.ajax(profile.starred_url).done(function(starList){
-  // 
+  //
   //   console.log(starList);
   //   console.log(profile);
   // });
@@ -138,14 +120,22 @@ $.ajax(repoURL).done(function(repoList){
 function displayRepos(repoList){
   var source = $('#repo-template').html();
   var template = Handlebars.compile(source);
+
 //chained underscore methods
 //sorts data in reverse chrono order (-)
+
+    console.log(repoList);
 _.chain(repoList)
   .sortBy(function(repo){
     return -(new Date(repo.updated_at)).getTime()
   })
   .each(function(repo){
     repo.updated_at = moment(new Date(repo.updated_at)).fromNow();
+
+    // $.ajax(repoList.commits_url).done(function(commitsAct){
+    //   console.log("commitsAct", commitsAct);
+    //   console.log("commitsAct", repoList.commits_url);
+    // });
 
     $('.repo-list').append(template(repo));
   });
@@ -157,6 +147,17 @@ $(function () {
 })
 
 
+
+$("#sparkline").sparkline([5,6,7,9,9,5,3,2,2,4,6,7], {
+    type: 'line',
+    lineColor: '#e2eda9',
+    fillColor: '#ffffff',
+    lineWidth: 2,
+    spotColor: undefined,
+    minSpotColor: undefined,
+    maxSpotColor: undefined,
+    highlightSpotColor: undefined,
+    highlightLineColor: undefined});
 
 // $('.plus-menu').on('click', function() {
 //   $('plus-menu').hide('[data-toggle]="tooltip"');

@@ -77,7 +77,7 @@
                 <div class="input-group">
                   <span class="input-group-btn search-bar">
                   </span>
-                  <input type="text" class="search-repo-bar form-control" placeholder="Search Repositories...">
+                  <input id="search-repo-bar" type="text" class="search-repo-bar form-control" placeholder="Search Repositories...">
                 </div>
               </div>
             <!-- </div> -->
@@ -110,7 +110,7 @@
               <!-- /btn-group -->
               <div class="col-md-4">
                 <div class="input-group-btn language-button">
-                  <button type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span>
+                  <button id="language-button" type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span>
             </button>
                   <ul class="dropdown-menu">
                       <li class="dropdown-header">Select type:</li>
@@ -151,7 +151,7 @@
 
     <div class="repos">
       <div class="repo-title">
-        <h3>{{name}}</h3>
+        <a id="repo-name" href="#">{{name}}</a>
       </div>
       <div class="left-side-of-repo">
         <div class="lang">
@@ -160,10 +160,10 @@
             {{language}}</span>
         </div>
         <div class="updated">
-          <span>{{updated_at}}</span>
+          <span>Updated {{updated_at}}</span>
         </div>
       </div>
-      <div class="githeartbeat">
+      <div id="sparkline" class="githeartbeat">
         <span>_________________</span>
       </div>
     </div>
@@ -174,16 +174,18 @@
     <div class="picture">
       <img class="img-rounded prof-pic" src="{{avatar_url}}" alt="" >
     </div>
+    <div class="name-and-user">
     <div class="name">
       <h3>{{name}}</h3>
     </div>
     <div class="username">
       <h4>{{login}}</h4>
     </div>
+    </div>
     <div class="biography">
       <p>{{bio}}</p>
     </div>
-    <div class="email-comnpany">
+    <div class="email-company">
     <div class="assoc">
       <span class="assoc-span">
         <div class="org-icon"></div>
@@ -255,6 +257,7 @@
 <script id="octicons-org-template" type="text/x-handlebars-template">
   {{{organization}}}
 </script>
+  <script type="text/javascript" src="scripts/sparkline.min.js"> </script>
   <script src="js/bundle.js"></script>
 </body>
 

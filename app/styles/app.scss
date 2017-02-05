@@ -12,6 +12,10 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .prof-pic {
   max-height: 232px;
 }
@@ -23,7 +27,7 @@ img {
 }
 
 /*************************************
-Header Styling
+   Header Styling
 *************************************/
 header {
   width: 100%;
@@ -34,7 +38,7 @@ header {
 }
 
 /*************************************
-Left Side of Header / Main Nav
+   Left Side of Header / Main Nav
 *************************************/
 .left-side-nav {
   // float: left;
@@ -102,7 +106,7 @@ Left Side of Header / Main Nav
 
 
 /*************************************
-Right Side of Header / Main Nav
+   Right Side of Header / Main Nav
 *************************************/
 
 
@@ -151,7 +155,7 @@ Right Side of Header / Main Nav
 }
 
 /*************************************
-Fixed NavBar *Overview*
+  Fixed NavBar *Overview*
 *************************************/
 .topper {
   margin-top: 24px;
@@ -193,7 +197,7 @@ Fixed NavBar *Overview*
 }
 
 /*************************************
-Search Bar and Sort Buttons Row
+  Search Bar and Sort Buttons Row
 *************************************/
 
 .search-bar-row {
@@ -214,41 +218,71 @@ Search Bar and Sort Buttons Row
     color: #C8C8C8;
 }
 
+#search-repo-bar {
+  border-radius: 5px;
+}
 
-.language-button {
+#language-button {
   background: linear-gradient(#FBFBFB, #EFEFEF);
   border-radius: 5px;
 
 }
-.type-button {
-   @extend .language-button;
+#type-button {
+   @extend #language-button;
 }
 .new-btn {
   color: white;
   background: linear-gradient(#8EDA6C, #59B133);
+  fill: #fff;
 }
 // .picture > img {
 //   border-radius: 5px;
 // }
 
+/*************************************
+  Individual Repo Template Stylings
+*************************************/
+
+.repos {
+  height: 108px;
+  padding-top: 30px;
+  border-bottom: 1px #e5e5e5 solid;
+}
+
+#repo-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4078c0;
+}
+
+#repo-name:hover {
+  color: #4078c0;
+}
+
+.repo-title {
+  padding-bottom: 10px;
+
+}
+
 .left-side-of-repo {
   display: inline;
     .lang {
       display: inline;
+      font-size: 12px;
+      color: #767676;
+      margin-right: 16px;
     }
     .updated {
-      display: inline;
+      @extend .lang;
     }
 }
 .githeartbeat {
   float: right;
 }
-.repos {
-  border-bottom: 1px #e5e5e5 solid;
-}
+
 
 /*************************
-Lanuage Colors
+  Lanuage Colors/Dots
 **************************/
 .dot {
   display: inline-block;
@@ -269,12 +303,59 @@ Lanuage Colors
   background-color: #F1E05A ;
 }
 
-.new-btn {
+/*************************
+  Profile/Bio Styling
+**************************/
+.bio {
+  margin-right: -15px;
+}
+.name-and-user {
+  padding-top: 16px;
+  padding-bottom: 8px;
 
-  fill: #fff;
+  .name > h3 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: -2px;
+    margin-top: 0;
+  }
+
+  .username > h4 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #666;
+    line-height: 24px;
+    margin-top: 0;
+    padding: 0;
+  }
+}
+//******************** bio
+.biography {
+  font-size: 14px;
+  color: #767676;
+  overflow: hidden;
+  line-height: 22px;
+  width: 230px;
+  border-bottom: 1px #e5e5e5 solid;
+}
+//************* company and email
+.email-company {
+  padding-top: 10px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+
+    img {
+      margin-right: 5px;
+
+    }
+
 }
 
+
+
 .org-pic {
-  height: 20px;
-  width: 20px;
+  height: 38px;
+  width: 38px;
+  border-radius: 5px;
 }
