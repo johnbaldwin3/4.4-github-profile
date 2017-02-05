@@ -14,9 +14,15 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-// background-color: #fff;
+background-color: #fff;
 // padding-top: 52px;
 // width: 100%;
+//
+}
+
+#body-builder {
+  background-color: #fff;
+//  padding-top: 52px;
 }
 
 .prof-pic {
@@ -35,10 +41,11 @@ img {
 header {
 
   height: 50px;
-
+  position: relative;
+  top: 0;
   padding: 10px 0;
   border-bottom: 1px solid #e5e5e5;
-  background:linear-gradient(#f5f5f5,#E9E9E9) ;
+  background:linear-gradient(#f5f5f5,#E9E9E9);
 }
 
 /*************************************
@@ -161,23 +168,41 @@ header {
 /*************************************
   Main Body / fixed positioning
 *************************************/
-//
-// .main {
-//   position: relative;
-//   background-color: #fff;
-//
-// }
-//
-// .main-scrollby, header {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//
-// }
-//
-// .menu-list {
-//   position: relative;
-// }
+
+.main-body {
+  // position: relative;
+  background-color: #fff;
+  // padding-top: 52px;
+
+}
+
+.menus {
+  display: table;
+  border-bottom: 1px #e5e5e5 solid;
+  height: 62px;
+  width: 100%;
+  z-index: 150;
+}
+
+.fixed-nav-bar,
+.main-body {
+  position: relative;
+}
+
+.main-scrollby {
+ // header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20px;
+
+}
+
+.main-nav-bar-toggle {
+  display: none;
+
+}
 
 /*************************************
   Fixed NavBar *Overview*
@@ -186,14 +211,7 @@ header {
   margin-top: 24px;
 }
 
-.menus {
-  display: table;
-  // padding-top: 25px;
-  border-bottom: 1px #e5e5e5 solid;
-  height: 62px;
-  // padding-bottom: 6px;
-  width: 100%;
-}
+
 
 .opt-li {
     display: table-cell;
@@ -215,10 +233,26 @@ header {
      }
 }
 
+
+
+.opt-li:visited,
+.opt-li:focus {
+  color: #767676;
+  text-decoration: none;
+}
+
 .opt-li:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+
+.selected {
+
   border-bottom: 2px solid #C9520D;
   color: #333;
   text-decoration: none;
+
 }
 
 /*************************************
@@ -250,15 +284,77 @@ header {
 #language-button {
   background: linear-gradient(#FBFBFB, #EFEFEF);
   border-radius: 5px;
+  color: #818181;
+  font-weight: 500;
+
 
 }
 #type-button {
    @extend #language-button;
+
+}
+
+#type-button:hover {
+  background-image: linear-gradient(#eee, #ddd);
+}
+
+#language-button:hover {
+  //background-image: linear-gradient(#eee, #ddd);
+  @extend #type-button:hover;
+}
+
+.type-button {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+}
+.type-all {
+  padding-right: 0;
+}
+
+.type-lang {
+  padding-left: 0;
+}
+
+.all-span {
+  color: #333;
+  opacity: 1;
+}
+
+.care,
+.care2 {
+  color: #333;
+  opacity: 1;
+}
+
+#care2 {
+  margin-left: 3px;
 }
 .new-btn {
   color: white;
   background: linear-gradient(#8EDA6C, #59B133);
   fill: #fff;
+  border-color: #519d30;
+
+}
+
+.new-button {
+  text-align: right;
+}
+
+.new-btn:hover,
+.new-btn:focus {
+  color: white;
+  background-image: linear-gradient(#85d063, #4f992f);
+}
+
+.dropdown-header {
+  height: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #f4f4f4;
+
+  overflow: hidden;
 }
 // .picture > img {
 //   border-radius: 5px;
@@ -377,10 +473,23 @@ header {
 
 }
 
-
-
 .org-pic {
   height: 38px;
   width: 38px;
   border-radius: 5px;
+}
+
+/*************************
+  Footer Styling
+**************************/
+.main {
+  position: relative;
+}
+.footer {
+  padding:100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px #e5e5e5 solid;
+  width: 100%
 }

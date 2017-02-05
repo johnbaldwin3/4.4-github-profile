@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body>
+<body id="body-builder">
   <div class="container clearfix"></div>
 
       <header>
@@ -56,6 +56,7 @@
   </div>
   </div>
   </header>
+  <div class="main-body">
   <div class="container main">
     <div class="row topper">
       <div class="col-md-3 bio">
@@ -87,8 +88,8 @@
             <div class="row">
               <div class="col-md-4 type-all">
                 <div class="input-group-btn type-button">
-                  <button id="type-button" type="button" class="btn btn-default dropdown-toggle type-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type:<span class="all-span"> All</span>
-                <span class="caret"></span>
+                  <button id="type-button" type="button" class="btn btn-default dropdown-toggle type-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type: <span class="all-span"> All </span>
+                <span class="caret care"></span>
               </button>
                   <ul class="dropdown-menu">
                     <li class="dropdown-header">Select type:</li>
@@ -108,9 +109,9 @@
                 </div>
               </div>
               <!-- /btn-group -->
-              <div class="col-md-4">
+              <div class="col-md-4 type-lang">
                 <div class="input-group-btn language-button">
-                  <button id="language-button" type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span>
+                  <button id="language-button" type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages: <span class="all-span"> All</span><span id="care2" class="caret care2"></span>
             </button>
                   <ul class="dropdown-menu">
                       <li class="dropdown-header">Select type:</li>
@@ -140,12 +141,22 @@
             <div class="row">
             <!--insert repo-template here-->
             </div>
+
+
           </div>
         </div>
 
+
+        </div>
+
       </div>
+
     </div>
+
   </div>
+
+
+
   <!--REPO TEMPLATE-->
   <script id="repo-template" type="text/x-handlebars-template">
 
@@ -167,6 +178,8 @@
         <span class ="sparkline">&nbsp;</span>
       </div>
     </div>
+
+
 
   </script>
 <!--PROFILE TEMPLATE-->
@@ -209,11 +222,12 @@
   </script>
   <!--MENU OVERVIEW TEMPLATE-->
   <script id="overview-template" type="text/x-handlebars-template">
-        <a class="opt-li" href="#">Overview</a>
-         <a class="opt-li" href="#">Repositories<span class="badge">{{public_repos}}</span></a>
+        <a class="opt-li" href="{{html_url}}">Overview</a>
+         <a class="opt-li selected" href="#">Repositories<span class="badge">{{public_repos}}</span></a>
         <a class="opt-li" href="#">Stars<span class="badge">3</span></a>
-        <a class="opt-li" href="#">Followers<span class="badge">{{followers}}</span></a>
-        <a class="opt-li" href="#">Following<span class="badge">{{following}}</span></a>
+        <a class="opt-li" href="{{followers_url}}
+">Followers<span class="badge">{{followers}}</span></a>
+        <a class="opt-li" href="{{following_url}}">Following<span class="badge">{{following}}</span></a>
   </script>
   <!--PROFILE THUMBNAIL PICTURE TEMPLATE-->
   <script id="prof-thumb-template" type="text/x-handlebars-template">
@@ -258,6 +272,8 @@
   {{{organization}}}
 </script>
   <script src="js/bundle.js"></script>
+
 </body>
+
 
 </html>

@@ -10,9 +10,11 @@ var moment = require('moment');
 var githubtoken = require('./gitapikey.js');
 var octicons = require("octicons");
 var sparkline = require("sparkline");
+
 /*************************************
 Setting Variables
 *************************************/
+var $optList = $(".opt-li");
 var url = "https://api.github.com/users/johnbaldwin3";
 var repoURL = "https://api.github.com/users/johnbaldwin3/repos";
 var userName= '';
@@ -149,16 +151,64 @@ $(function () {
 console.log('sparkline', sparkline);
 console.log($('#sparkline'));
 
-$('.sparkline').html(sparkline([5,6,7,9,9,5,3,2,2,4,6,7], {
-    type: 'line',
-    lineColor: '#e2eda9',
-    fillColor: '#ffffff',
-    lineWidth: 2,
-    spotColor: undefined,
-    minSpotColor: undefined,
-    maxSpotColor: undefined,
-    highlightSpotColor: undefined,
-    highlightLineColor: undefined}));
+/*************************************
+add class with click
+*************************************/
+
+$($optList).on('click', function(){
+  //if ($(this).hasClass("selected")) {
+  //  $(this).removeClass("selected");
+//  } else {
+  //$(this).addClass("selected");
+// }
+console.log("i've been clicked");
+});
+
+
+/*************************************
+*Team Treehouse: Sticky Nav
+*https://teamtreehouse.com/community/forum-tip-creat/*  /e-a-sticky-navigation-with-css-and-jquery-2
+************************************/
+
+var $menuList = $('.fixed-nav-bar');
+
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 60){
+    $menuList.addClass("main-scrollby");
+
+  } else {
+    $menuList.removeClass("main-scrollby");
+
+  }
+});
+
+//**********************************
+//trying to get additional side nav to pop up
+//after profile picture scrolls by
+// no such luck
+
+
+// $(window).scroll(function() {
+//   if ($(this).scrollTop() > 220){
+//     $menuList.addClass(".container-fluid col-md-12");
+//
+//   } else {
+//     $menuList.removeClass(".container-fluid col-md-12");
+//
+//   }
+// });
+
+
+// $('.sparkline').html(sparkline([5,6,7,9,9,5,3,2,2,4,6,7], {
+//     type: 'line',
+//     lineColor: '#e2eda9',
+//     fillColor: '#ffffff',
+//     lineWidth: 2,
+//     spotColor: undefined,
+//     minSpotColor: undefined,
+//     maxSpotColor: undefined,
+//     highlightSpotColor: undefined,
+//     highlightLineColor: undefined}));
 
 // $('.plus-menu').on('click', function() {
 //   $('plus-menu').hide('[data-toggle]="tooltip"');
