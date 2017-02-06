@@ -29,7 +29,7 @@ var ctx = {
   repo: octicons.repo.toSVG(),
   organization: octicons.organization.toSVG()
 };
-console.log(ctx);
+  console.log(ctx);
   // $('.repoicon').html(template(ctx));
   $('.new-button').html(templateOcticons(ctx));
 }());

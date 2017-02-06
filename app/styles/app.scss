@@ -13,8 +13,8 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 body {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
 // padding-top: 52px;
 // width: 100%;
 //
@@ -22,6 +22,8 @@ background-color: #fff;
 
 #body-builder {
   background-color: #fff;
+  min-width: 1200px !important;
+  // width: auto;
 //  padding-top: 52px;
 }
 
@@ -261,6 +263,7 @@ header {
 
 .search-bar-row {
   height: 68px;
+  width: 877px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px #e5e5e5 solid;
