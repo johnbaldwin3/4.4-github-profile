@@ -7,7 +7,7 @@ var Handlebars = require('handlebars');
 var _ = require('underscore');
 require('bootstrap-sass');
 var moment = require('moment');
-var githubtoken = require('./gitapikey.js');
+//var githubtoken = require('./gitapikey.js');
 var octicons = require("octicons");
 var sparkline = require("sparkline");
 
