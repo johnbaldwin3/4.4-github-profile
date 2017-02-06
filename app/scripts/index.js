@@ -7,7 +7,7 @@ var Handlebars = require('handlebars');
 var _ = require('underscore');
 require('bootstrap-sass');
 var moment = require('moment');
-var githubtoken; // = require('./gitapikey.js');
+var githubtoken = require('./gitapikey.js');
 var octicons = require("octicons");
 var sparkline = require("sparkline");
 
@@ -17,7 +17,7 @@ Setting Variables
 var $optList = $(".opt-li");
 var url = "https://api.github.com/users/johnbaldwin3";
 var repoURL = "https://api.github.com/users/johnbaldwin3/repos";
-var userName= '';
+var userName = '';
 /*************************************
 Octicons
 *************************************/
@@ -57,9 +57,9 @@ $.ajax(url).done(function(profile){
 
   //trying to figure out how to get star //count $.ajax(profile.starred_url).done(function(starList){
 
-    console.log(starList);
-    console.log(profile);
-  });
+    //console.log(starList);
+  //   console.log(profile);
+  // });
 
 
   displayProf(profile);
@@ -149,21 +149,21 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-console.log('sparkline', sparkline);
-console.log($('#sparkline'));
+// console.log('sparkline', sparkline);
+// console.log($('#sparkline'));
 
 /*************************************
 add class with click
 *************************************/
 
-$($optList).on('click', function(){
-  //if ($(this).hasClass("selected")) {
-  //  $(this).removeClass("selected");
-//  } else {
-  //$(this).addClass("selected");
-// }
-console.log("i've been clicked");
-});
+// $($optList).on('click', function(){
+//   //if ($(this).hasClass("selected")) {
+//   //  $(this).removeClass("selected");
+// //  } else {
+//   //$(this).addClass("selected");
+// // }
+// console.log("i've been clicked");
+// });
 
 
 /*************************************
