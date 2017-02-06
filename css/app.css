@@ -6114,6 +6114,11 @@ header {
   width: 38px;
   border-radius: 5px; }
 
+.email {
+  width: 230px;
+  padding: 15px 0;
+  border-bottom: 1px #e5e5e5 solid; }
+
 /*************************
   Footer Styling
 **************************/
@@ -6127,4 +6132,5 @@ header {
   bottom: 0;
   border-top: 1px #e5e5e5 solid;
   width: 100%; }
+
 /*# sourceMappingURL=app.css.map */
