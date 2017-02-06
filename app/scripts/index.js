@@ -35,13 +35,13 @@ console.log(ctx);
 }());
 
 //send auth. token to github if token is provided
-//if(githubtoken !== undefined) {
-  // $.ajaxSetup({
-  //   headers: {
-  //     'Authorization' : 'token ' + githubtoken.token
-  //   }
-  // });
-// }
+if(githubtoken !== undefined) {
+  $.ajaxSetup({
+    headers: {
+      'Authorization' : 'token ' + githubtoken.token
+    }
+  });
+}
 
 /*************************************
 AJAX Calls
@@ -55,10 +55,10 @@ $.ajax(url).done(function(profile){
   });
 
   //trying to figure out how to get star //count $.ajax(profile.starred_url).done(function(starList){
-  //
-  //   console.log(starList);
-  //   console.log(profile);
-  // });
+
+    console.log(starList);
+    console.log(profile);
+  });
 
 
   displayProf(profile);
