@@ -7,7 +7,7 @@ var Handlebars = require('handlebars');
 var _ = require('underscore');
 require('bootstrap-sass');
 var moment = require('moment');
-//var githubtoken = require('./gitapikey.js');
+var githubtoken = require('./gitapikey.js');
 var octicons = require("octicons");
 var sparkline = require("sparkline");
 
@@ -35,13 +35,13 @@ console.log(ctx);
 }());
 
 //send auth. token to github if token is provided
-if(githubtoken !== undefined) {
-  $.ajaxSetup({
-    headers: {
-      'Authorization' : 'token ' + githubtoken.token
-    }
-  });
-}
+//if(githubtoken !== undefined) {
+  // $.ajaxSetup({
+  //   headers: {
+  //     'Authorization' : 'token ' + githubtoken.token
+  //   }
+  // });
+// }
 
 /*************************************
 AJAX Calls
