@@ -285,6 +285,7 @@ header {
 }
 
 #language-button {
+  display: inline-block;
   background: linear-gradient(#FBFBFB, #EFEFEF);
   border-radius: 5px;
   color: #818181;
@@ -307,7 +308,6 @@ header {
 }
 
 .type-button {
-  width: 100%;
   margin: 0;
   text-align: right;
 }
@@ -334,6 +334,7 @@ header {
   margin-left: 3px;
 }
 .new-btn {
+  display: inline-block;
   color: white;
   background: linear-gradient(#8EDA6C, #59B133);
   fill: #fff;
