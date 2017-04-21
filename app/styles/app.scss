@@ -328,6 +328,13 @@ header {
 .search-options {
   width: 500px;
 }
+
+.org-icon {
+  img {
+  max-width: 20px;
+  max-height: 20px;
+}
+}
 #language-button {
   //display: inline-block;
   background: linear-gradient(#FBFBFB, #EFEFEF);
