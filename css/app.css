@@ -5768,7 +5768,8 @@ body {
   background-color: #fff; }
 
 #body-builder {
-  background-color: #fff; }
+  background-color: #fff;
+  min-width: 1200px !important; }
 
 .prof-pic {
   max-height: 232px; }
@@ -5785,17 +5786,16 @@ header {
   top: 0;
   padding: 10px 0;
   border-bottom: 1px solid #e5e5e5;
-  background: -webkit-linear-gradient(#f5f5f5, #E9E9E9);
-  background: linear-gradient(#f5f5f5, #E9E9E9); }
+  background-color: #21292D; }
 
 /*************************************
    Left Side of Header / Main Nav
 *************************************/
-.left-side-nav {
-  display: inline-block; }
-
 .logo-anchor {
-  display: inline-block; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle; }
 
 .logo-img {
   display: -webkit-box;
@@ -5804,6 +5804,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5px;
   height: 30px; }
 
 .search-github {
@@ -5813,19 +5814,24 @@ header {
 
 .git-search {
   display: inline-block;
-  height: 28px; }
+  margin-top: 2px;
+  height: 30px;
+  min-width: 300px;
+  background-color: #3D4347;
+  border: none;
+  color: grey; }
 
 /**** thank you stackoverflow ***** ---http://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css
 */
 .git-search::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #C8C8C8; }
+  color: #898D8F; }
 
 .nav-opt-ul {
   display: inline-block;
   list-style: none;
   padding-left: 0px;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 .nav-opt-ul > li {
   display: inline-block; }
@@ -5835,25 +5841,45 @@ header {
     font-size: 13px;
     font-weight: 600;
     line-height: 20px;
-    color: #333333; }
+    color: #C7C9CA; }
   .nav-opt-ul > li a:hover {
     text-decoration: none;
     color: #4078c0; }
+
+.navbar-inverse .navbar-nav > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: center;
+  padding: 5px 8px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.75); }
+
+.navbar-inverse {
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center; }
 
 /*************************************
    Right Side of Header / Main Nav
 *************************************/
 .plus-menu {
-  height: 30px;
-  width: 30px;
   border: none;
   background: none;
   padding: 0;
+  padding-right: 10px;
   margin: 0 auto; }
 
+#plus-ico {
+  max-height: 20px;
+  padding: 0; }
+
 .thumb-menu {
-  height: 30px;
-  width: 30px;
   border: none;
   background: none;
   padding: 0;
@@ -5869,7 +5895,7 @@ header {
 
 .right-nav {
   text-align: right;
-  padding-top: 5px; }
+  padding-top: 14px; }
   .right-nav .plus-ico {
     display: inline-block; }
   .right-nav .prof-thumb {
@@ -5949,6 +5975,7 @@ header {
 *************************************/
 .search-bar-row {
   height: 68px;
+  width: 877px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px #e5e5e5 solid;
@@ -5964,26 +5991,31 @@ header {
   color: #C8C8C8; }
 
 #search-repo-bar {
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 500px; }
+
+.search-options {
+  width: 500px; }
+
+.org-icon img {
+  max-width: 20px;
+  max-height: 20px; }
 
 #language-button, #type-button {
   background: -webkit-linear-gradient(#FBFBFB, #EFEFEF);
   background: linear-gradient(#FBFBFB, #EFEFEF);
   border-radius: 5px;
   color: #818181;
-  font-weight: 500; }
+  font-weight: 500;
+  margin-right: 3px; }
 
 #type-button:hover, #language-button:hover {
   background-image: -webkit-linear-gradient(#eee, #ddd);
   background-image: linear-gradient(#eee, #ddd); }
 
-.type-button {
-  width: 100%;
-  margin: 0;
-  text-align: right; }
-
 .type-all {
-  padding-right: 0; }
+  padding-right: 0;
+  margin-left: 10px; }
 
 .type-lang {
   padding-left: 0; }
@@ -6001,11 +6033,13 @@ header {
   margin-left: 3px; }
 
 .new-btn {
+  display: inline-block;
   color: white;
   background: -webkit-linear-gradient(#8EDA6C, #59B133);
   background: linear-gradient(#8EDA6C, #59B133);
   fill: #fff;
-  border-color: #519d30; }
+  border-color: #519d30;
+  margin-left: 10px; }
 
 .new-button {
   text-align: right; }
@@ -6132,5 +6166,22 @@ header {
   bottom: 0;
   border-top: 1px #e5e5e5 solid;
   width: 100%; }
+
+.caret {
+  color: rgba(255, 255, 255, 0.75); }
+
+.caret1 {
+  padding-left: -10; }
+
+.navbar-nav {
+  padding-top: 8px; }
+
+.search-bar-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 /*# sourceMappingURL=app.css.map */
