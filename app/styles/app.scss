@@ -41,13 +41,12 @@ img {
    Header Styling
 *************************************/
 header {
-
   height: 50px;
   position: relative;
   top: 0;
   padding: 10px 0;
   border-bottom: 1px solid #e5e5e5;
-  background:linear-gradient(#f5f5f5,#E9E9E9);
+  background-color: #21292D;
 }
 
 /*************************************
@@ -55,18 +54,23 @@ header {
 *************************************/
 .left-side-nav {
   // float: left;
-  display: inline-block;
+  //display: inline-block;
 }
 //******************** logo work
 .logo-anchor {
-  display: inline-block;
-
+  display: flex;
+  vertical-align: middle;
 }
 
+.form-control {
+
+}
 .logo-img {
   display: flex;
   align-items: center;
+  margin-top: 5px;
   height: 30px;
+  //color: white;
 }
 
 //******************** search bar
@@ -80,16 +84,19 @@ header {
 
 .git-search {
   display: inline-block;
-  height: 28px;
-  // .git-search::-webkit-input-placeholder{
-  //   color: #C8C8C8;
-  // }
+  margin-top: 2px;
+  height: 30px;
+  min-width: 300px;
+  background-color: #3D4347;
+  border: none;
+  color: grey;
+
 }
 
 /**** thank you stackoverflow ***** ---http://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css
 */
 .git-search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #C8C8C8;
+    color: #898D8F;
 }
 //******************** navbar options
 
@@ -97,7 +104,7 @@ header {
   display: inline-block;
   list-style: none;
   padding-left: 0px;
-  vertical-align: top;
+  vertical-align: middle;
 
 }
 
@@ -109,7 +116,7 @@ header {
       font-size: 13px;
       font-weight: 600;
       line-height: 20px;
-      color: #333333;
+      color: #C7C9CA;
     }
     a:hover {
       text-decoration: none;
@@ -117,6 +124,31 @@ header {
     }
 }
 
+.navbar-inverse .navbar-nav > li > a {
+  display: flex;
+  vertical-align: center;
+  padding: 5px 8px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255,255,255,0.75);
+}
+
+.navbar-inverse {
+  margin-bottom: 0;
+  display: flex;
+  align-content: center;
+}
+
+
+// .nav-opt-ul > li a {
+//     padding: 4px 8px;
+//     display: block;
+//     font-size: 13px;
+//     font-weight: 600;
+//     line-height: 20px;
+//     color: #333333;
+// }
 
 /*************************************
    Right Side of Header / Main Nav
@@ -124,16 +156,23 @@ header {
 
 
 .plus-menu {
-  height: 30px;
-  width: 30px;
+  //height: 30px;
+  //width: 30px;
   border: none;
   background: none;
   padding: 0;
+  padding-right: 10px;
   margin: 0 auto;
 }
+
+#plus-ico {
+  max-height: 20px;
+  padding: 0;
+}
+
+
 .thumb-menu {
-  height: 30px;
-  width: 30px;
+
   border: none;
   background: none;
   padding: 0;
@@ -151,7 +190,7 @@ header {
 }
 .right-nav {
   text-align: right;
-  padding-top: 5px;
+  padding-top: 14px;
   .plus-ico {
   display: inline-block;
   }
@@ -159,6 +198,8 @@ header {
     display: inline-block;
   }
 }
+
+
 
 .drop-menu-plus::after{
 
@@ -250,7 +291,6 @@ header {
 
 
 .selected {
-
   border-bottom: 2px solid #C9520D;
   color: #333;
   text-decoration: none;
@@ -282,14 +322,19 @@ header {
 
 #search-repo-bar {
   border-radius: 5px;
+  width: 500px;
 }
 
+.search-options {
+  width: 500px;
+}
 #language-button {
-  display: inline-block;
+  //display: inline-block;
   background: linear-gradient(#FBFBFB, #EFEFEF);
   border-radius: 5px;
   color: #818181;
   font-weight: 500;
+  margin-right: 3px;
 
 
 }
@@ -308,11 +353,12 @@ header {
 }
 
 .type-button {
-  margin: 0;
-  text-align: right;
+  //margin-left: 10px;
+  //text-align: right;
 }
 .type-all {
   padding-right: 0;
+  margin-left: 10px;
 }
 
 .type-lang {
@@ -339,6 +385,7 @@ header {
   background: linear-gradient(#8EDA6C, #59B133);
   fill: #fff;
   border-color: #519d30;
+  margin-left: 10px;
 
 }
 
@@ -501,4 +548,22 @@ header {
   bottom: 0;
   border-top: 1px #e5e5e5 solid;
   width: 100%
+}
+
+.caret {
+  color: rgba(255,255,255,0.75);
+}
+
+.caret1 {
+  padding-left: -10;
+}
+
+.navbar-nav {
+  padding-top: 8px;
+
+}
+
+.search-bar-row {
+  display: flex;
+  align-items: center;
 }
